@@ -8,9 +8,11 @@ import Order from "./pages/order/Order";
 import Cart from "./pages/cart/Cart";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import NoPage from "./pages/nopage/NoPage";
+import Mystate from "./context/data/myState"
 
 const App = () => {
   return (
+    <Mystate>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,10 +20,9 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/*" element={<NoPage />} />
-
-
       </Routes>
     </Router>
+    </Mystate>
   )
 }
 
