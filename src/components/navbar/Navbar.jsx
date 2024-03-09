@@ -72,9 +72,9 @@ const Navbar = () => {
                                     </div>
 
                                     <div className="flow-root">
-                                        <a className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/signup'} className="-m-2 block p-2 font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>
                                             Logout
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="flow-root">
                                         <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
@@ -145,9 +145,9 @@ const Navbar = () => {
                                         Admin
                                     </Link>
 
-                                    <a className="text-sm font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/signup'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Logout
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 <div className="hidden lg:ml-8 lg:flex">
@@ -198,7 +198,7 @@ const Navbar = () => {
                 </nav>
             </header>
         </div>
-    )
+    )   
 }
 
 export default Navbar
