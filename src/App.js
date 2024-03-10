@@ -9,7 +9,7 @@ import Order from "./pages/order/Order";
 import Cart from "./pages/cart/Cart";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import NoPage from "./pages/nopage/NoPage";
-import Mystate from "./context/data/myState"
+import MyState from './context/data/MyState';
 import Login from "./pages/registration/Login";
 import Signup from "./pages/registration/Signup";
 import ProductInfo from "./pages/productInfo/ProductInfo";
@@ -19,7 +19,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
-    <Mystate>
+    <MyState>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,7 +44,7 @@ const App = () => {
       </Routes>
       <ToastContainer />
     </Router>
-    </Mystate>
+    </MyState>
   )
 }
 
