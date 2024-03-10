@@ -12,7 +12,8 @@ import Mystate from "./context/data/myState"
 import Login from "./pages/registration/Login";
 import Signup from "./pages/registration/Signup";
 import ProductInfo from "./pages/productInfo/ProductInfo";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <Mystate>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/productinfo/:id" element={<ProductInfo />} />
         <Route path="/*" element={<NoPage />} />
       </Routes>
+      <ToastContainer />
     </Router>
     </Mystate>
   )
