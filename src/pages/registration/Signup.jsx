@@ -18,11 +18,7 @@ function Signup() {
     const signup = async () => {
         setLoading(true)
         if (name === "" || email === "" || password === "") {
-            return (
-                toast.error("All fields are required"),
-                setLoading(false)
-            )
-                
+            return toast.error("All fields are required")
         }
 
         try {
@@ -52,7 +48,7 @@ function Signup() {
 
     return (
         <div className=' flex justify-center items-center h-screen'>
-            {loading && <Loader/>}
+            { loading && <Loader/> }
             <div className=' bg-gray-800 px-10 py-10 rounded-xl '>
                 <div className="">
                     <h1 className='text-center text-white text-xl mb-4 font-bold'>Signup</h1>
