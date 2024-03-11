@@ -4,8 +4,8 @@ import { Timestamp, addDoc, collection, deleteDoc, doc, getDocs, onSnapshot, ord
 import { toast } from 'react-toastify';
 import { fireDB } from '../../firebase/FirebaseConfig';
 
-const  MyState = (props) => {
-    const [mode, setMode] = useState('light')
+function MyState(props) {
+    const [mode, setMode] = useState('light');
 
     const toggleMode = () => {
         if (mode === 'light') {
@@ -198,4 +198,4 @@ const  MyState = (props) => {
     )
 }
 
-export default MyState;
+export default MyState
