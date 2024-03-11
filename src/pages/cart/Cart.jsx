@@ -7,9 +7,23 @@ import { deleteFromCart } from '../../redux/cartSlice';
 import { toast } from 'react-toastify';
 import { addDoc, collection } from 'firebase/firestore';
 import { fireDB } from '../../firebase/FirebaseConfig';
-
+import axios from 'axios';
 
 function Cart() {
+  const [key, setKey] = useState('')
+  const [secret, setSecret] = useState('')
+
+
+  const fetchkeyAndSecret = async () => {
+   let resp =  await axios.get('http://localhost:4000/api/getkey');
+   const {key, secret} = resp?.data;
+   setKey(key);
+   setSecret(secret)
+  }
+  useEffect(() => {
+    fetchkeyAndSecret()
+  }, [])
+
 
   const context = useContext(myContext)
   const { mode } = context;
@@ -21,7 +35,7 @@ function Cart() {
 
   const deleteCart = (item) => {
     dispatch(deleteFromCart(item));
-    toast.success("Deleting from cart")
+    toast.success("Delete cart")
   }
 
   useEffect(() => {
@@ -83,8 +97,8 @@ function Cart() {
     }
 
     var options = {
-      key: "",
-      key_secret: "",
+      key: key,
+      key_secret: secret,
       amount: parseInt(grandTotal * 100),
       currency: "INR",
       order_receipt: 'order_rcptid_' + name,

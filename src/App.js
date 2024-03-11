@@ -54,7 +54,6 @@ export default App;
 
 export const ProtectedRouteforUser = ({children}) => {
   const user = localStorage.getItem('user');
-
   if(user) {
     return children
   } else {
