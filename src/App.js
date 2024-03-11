@@ -10,6 +10,7 @@ import Cart from "./pages/cart/Cart";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
 import NoPage from "./pages/nopage/NoPage";
 import MyState from './context/data/MyState';
+import Allproducts from './pages/allproducts/AllProducts';
 import Login from "./pages/registration/Login";
 import Signup from "./pages/registration/Signup";
 import ProductInfo from "./pages/productInfo/ProductInfo";
@@ -23,6 +24,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/allproducts" element={<Allproducts />} />
         <Route path="/order" element={
         <ProtectedRouteforUser>
           <Order />
