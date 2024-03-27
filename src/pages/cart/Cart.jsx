@@ -10,19 +10,6 @@ import { fireDB } from '../../firebase/FirebaseConfig';
 import axios from 'axios';
 
 function Cart() {
-  const [key, setKey] = useState('')
-  const [secret, setSecret] = useState('')
-
-
-  const fetchkeyAndSecret = async () => {
-   let resp =  await axios.get('http://localhost:4000/api/getkey');
-   const {key, secret} = resp?.data;
-   setKey(key);
-   setSecret(secret)
-  }
-  useEffect(() => {
-    fetchkeyAndSecret()
-  }, [])
 
 
   const context = useContext(myContext)
@@ -97,8 +84,8 @@ function Cart() {
     }
 
     var options = {
-      key: key,
-      key_secret: secret,
+      key: "", // here add key and secret frpm razorpay _id
+      key_secret: "",
       amount: parseInt(grandTotal * 100),
       currency: "INR",
       order_receipt: 'order_rcptid_' + name,
