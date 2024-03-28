@@ -21,7 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <Mystate>
-    <Router>
+    <Router basename="/react-ecommerce">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/allproducts" element={<Allproducts />} />
