@@ -29,7 +29,7 @@ function Login() {
           progress: undefined,
           theme: "colored",
         });
-        window.location.href='/'
+        window.location.href='/react-ecommerce'
         setLoading(false);
       } catch (error) {
         toast.error('Sigin Failed', {

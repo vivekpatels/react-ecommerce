@@ -59,7 +59,7 @@ export const ProtectedRouteforUser = ({children}) => {
   if(user) {
     return children
   } else {
-    return <Navigate to={'/login'} />
+    return <Navigate to={'/react-ecommerce/login'} />
   }
 }
 
@@ -71,6 +71,6 @@ export const ProtectedRouteForAdmin = ({children}) => {
   if(admin.user.email === 'vivekadmin@gmail.com') {
     return children;
   } else {
-    return <Navigate to={'/login'} />
+    return <Navigate to={'/react-ecommerce/login'} />
   }
 }

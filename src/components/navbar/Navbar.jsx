@@ -20,7 +20,7 @@ function Navbar() {
 
   const logout = () => {
     localStorage.clear('user');
-    window.location.href = '/login'
+    window.location.href = '/react-ecommerce/login'
   }
 
   const cartItems = useSelector((state) => state.cart)
