@@ -49,7 +49,7 @@ function Mystate(props) {
             await addDoc(productRef, products)
             toast.success("Add product successfully");
             setTimeout(() => {
-                window.location.href = '/dashboard'
+                window.location.href = '/react-ecommerce/dashboard'
             }, 800);
             getProductData();
             setLoading(false)
@@ -109,7 +109,7 @@ function Mystate(props) {
             await setDoc(doc(fireDB, 'products', products.id), products)
             toast.success("Product Updated successfully")
             setTimeout(() => {
-                window.location.href = '/dashboard'
+                window.location.href = '/react-ecommerce/dashboard'
             }, 800);
             getProductData();
             setLoading(false)
